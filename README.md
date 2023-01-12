@@ -38,10 +38,10 @@
 npx degit geonhwiii/next-emotion-twin-typescript %{PROJECT_NAME}%
 
 # 2. with npx example
-npx create-next-app next-emotion-twin-typescript -e https://github.com/geonhwiii/next-emotion-twin-typescript
+npx create-next-app %{PROJECT_NAME}% -e https://github.com/geonhwiii/next-emotion-twin-typescript
 
 # 3. with yarn example
-yarn create next-app next-emotion-twin-typescript -e https://github.com/geonhwiii/next-emotion-twin-typescript
+yarn create next-app %{PROJECT_NAME}% -e https://github.com/geonhwiii/next-emotion-twin-typescript
 
 ```
 
