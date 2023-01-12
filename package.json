@@ -1,6 +1,6 @@
 {
   "name": "next-emotion-twin-typescript",
-  "version": "0.1.3",
+  "version": "0.1.1",
   "private": false,
   "scripts": {
     "dev": "next dev",
