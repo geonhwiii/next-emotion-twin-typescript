@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<img src="https://user-images.githubusercontent.com/44767362/212044505-03e425c3-2849-46ab-94bd-52007e52a015.png" alt="dan-avatar" width="300" />
+</div>
+<div align="center">
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/geonhwiii/next-emotion-twin-typescript" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a> <a href="https://app.netlify.com/start/deploy?repository=https://github.com/geonhwiii/next-emotion-twin-typescript" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
+</div>
+<br />
 
-## Getting Started
+<p align="center">
+  <a href="https://nextjs.org">
+    <img alt="nextjs" src="https://user-images.githubusercontent.com/44767362/212047356-ff462675-3e79-485c-9c31-8f56f443b199.svg" height="50" />
+  </a>
+  <a href="https://emotion.sh">
+    <img alt="emotion.js" src="https://user-images.githubusercontent.com/44767362/212047328-82ab7691-9b66-49e3-a7b5-afa8968ad349.png" height="50" />
+  </a>
+  <a href="https://tailwindcss.com">
+    <img alt="tailwindcss" src="https://user-images.githubusercontent.com/44767362/212047344-ece46365-7399-47ed-a342-b7471ecf429e.svg" height="50" />
+  </a>
+  <a href="https://github.com/ben-rogerson/twin.macro">
+    <img alt="twin.macro" src="https://user-images.githubusercontent.com/44767362/212047307-5cef6d45-7e4a-4dc1-b8df-65757509abf5.svg" height="50" />
+  </a>
+</p>
+<br />
+<p align="center">
+  <img src="https://img.shields.io/badge/React-v18.2.0-61DAFB?style=flat&logo=React&logoColor=white&style=for-the-badge"/> 
+  <img src="https://img.shields.io/badge/Typescript-v4.9.4-3178C6?style=flat&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Next.JS-v13.1.1-000000?style=flat&logo=Next.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Tailwind-v3.2.4-06B6D4?style=flat&logo=TailwindCSS&logoColor=white"/>
+</p>
+<br />
 
-First, run the development server:
+## 🚀 Getting Started
+
+1. Clone Project with `CLI`
 
 ```bash
-npm run dev
-# or
-yarn dev
+# 1. with npx degit
+npx degit geonhwiii/next-emotion-twin-typescript %{PROJECT_NAME}%
+
+# 2. with npx example
+npx create-next-app next-emotion-twin-typescript -e https://github.com/geonhwiii/next-emotion-twin-typescript
+
+# 3. with yarn example
+yarn create next-app next-emotion-twin-typescript -e https://github.com/geonhwiii/next-emotion-twin-typescript
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. After cloning, run this command: `yarn` or `yarn install`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+# move to project
+$ cd project_name
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# install packages
+$ yarn
+or
+$ npm istall
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+🔗 References:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Nextjs](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+- [TailwindCSS](https://tailwindcss.com/)
+- [EmotionJS](https://emotion.sh/)
+- [Twin.macro](https://github.com/ben-rogerson/twin.macro)
+- [Vercel](https://vercel.com/)
