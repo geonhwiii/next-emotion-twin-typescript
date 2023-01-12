@@ -57,7 +57,79 @@ or
 $ npm istall
 ```
 
-🔗 References:
+<br />
+
+## 💡 Why should I use this project?
+
+> When we start `NextJS` Proejct with `tailwindcss` & `emotion`, we need `twin.macro`.
+>
+> But `twin.macro` currently require custom `barbel`, which stops using the `SWC compiler`.
+>
+> So we can start the proejct with SWC compiler using `withTwin.js`.
+>
+> This project helps you get started most comfortably! 🔥
+
+<br />
+
+## 🗂️ Basic Folder
+
+- `pages`
+- `components`
+- `configs`
+- `styles`
+- `types`
+- `assets`
+  - `icons`
+  - `images`
+- `libs`
+- `utils`
+- `constants`
+- `public`
+
+<br />
+
+## ⭐️ Tip
+
+1. In `tsconfig.json`, The paths is set to `"@/***/*"`.
+
+```json
+// you can customize it!
+"baseUrl": ".",
+"paths": {
+  "@/pages/*": ["pages/*"],
+  "@/components/*": ["components/*"],
+  "@/utils/*": ["utils/*"],
+  "@/common/*": ["common/*"],
+  "@/styles/*": ["styles/*"],
+  "@/configs/*": ["configs/*"],
+  "@/constants/*": ["constants/*"],
+  "@/assets/*": ["assets/*"],
+  "@/types/*": ["types/*"]
+}
+```
+
+```ts
+//  you can import file like this
+import GlobalStyles from '@/styles/GlobalStyles';
+```
+
+2. Use `tailwindcss` with `emotion`!
+
+```tsx
+<div css={tw`flex flex-col justify-center items-center`}>
+  <div css={tw`text-center font-bold`}>Hello World!!!</div>
+</div>
+```
+
+<br />
+
+## 🧑🏻‍💻 Authors
+
+🇰🇷 Dan (단님) ([@geonhwiii](https://github.com/geonhwiii))
+
+<br />
+
+### 🔗 References:
 
 - [Nextjs](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 - [TailwindCSS](https://tailwindcss.com/)
