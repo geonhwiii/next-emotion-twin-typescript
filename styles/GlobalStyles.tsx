@@ -3,7 +3,7 @@ import tw, { css, GlobalStyles as TwinStyles } from 'twin.macro';
 
 const customStyles = css({
   ['*']: {
-    ...tw`m-0 p-0 box-border`,
+    ...tw`box-border p-0 m-0`,
   },
   ['html,body']: {
     ...tw`max-w-full overflow-x-hidden`,
@@ -15,7 +15,7 @@ const customStyles = css({
     ...tw`antialiased`,
   },
   a: {
-    ...tw`text-inherit no-underline`,
+    ...tw`no-underline text-inherit`,
   },
 });
 
