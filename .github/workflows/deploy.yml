@@ -1,23 +1,35 @@
-name: Deploy App
+name: deploy
 on:
   push:
-    branches:
+    branches: # push event on main
       - main
 
 jobs:
-  release-application:
+  pre:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: github release tag
-        id: tag_version
-        uses: mathieudutour/github-tag-action@v6.1
-        with:
-          github_token: ${{ secrets.DAN_TOKEN }}
+      - name: check node version
+        run: node -v
 
-      - name: create github release
-        uses: ncipollo/release-action@v1
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout source code # checkout repo
+        uses: actions/checkout@v3
+
+      - name: get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        id: yarn-cache
         with:
-          tag: ${{ steps.tag_version.outputs.new_tag }}
-          name: Release ${{ steps.tag_version.outputs.new_tag }}
-          body: ${{ steps.tag_version.outputs.changelog }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: install dependency
+        run: yarn
+
+      - name: build
+        run: yarn build
