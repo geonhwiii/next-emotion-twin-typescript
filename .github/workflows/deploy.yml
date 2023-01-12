@@ -1,0 +1,22 @@
+name: Deploy App
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-application:
+    runs-on: ubuntu-latest
+    steps:
+      - name: github release tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: update github project release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
